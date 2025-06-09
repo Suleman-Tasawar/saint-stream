@@ -1,17 +1,11 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink,Link } from "react-router-dom";
 import Button from "./Button";
+import { NavbarProps } from "../utils/data";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-
-interface NavbarProps {
-  styles?: string;
-}
 
 const navLinks = [
   { path: '/', label: 'Home' },
-  { path: '/discover', label: 'Discover' },
-  { path: '/movie-release', label: 'Movie Release' },
-  { path: '/forum', label: 'Forum' },
 ];
 
 const Navbar: React.FC<NavbarProps> = ({ styles = '' }) => {
@@ -20,7 +14,10 @@ const Navbar: React.FC<NavbarProps> = ({ styles = '' }) => {
   return (
     <header className={`w-full  bg-white text-black ${styles}`}>
       <div className="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
-        <h1 className="font-bold text-2xl cursor-pointer">Saint Stream</h1>
+        <Link to = "/">
+          <h1 className="font-bold text-2xl cursor-pointer">Saint Stream</h1>
+        </Link>
+        
 
         {/* Desktop Nav */}
         <nav className="hidden lg:flex space-x-6">
