@@ -1,54 +1,117 @@
-# React + TypeScript + Vite
+# 🎬 Saint Stream – Stream Movies and Series
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Saint Stream** is a full-featured movie and series streaming platform built with **React**, **TypeScript**, and **Vite**. It allows users to explore popular movies and series, view detailed overviews, stream selected content, and save items to a watch later list — all with an intuitive and responsive UI.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## Expanding the ESLint configuration
+### 🎥 Movie & Series Browsing
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+* Browse the latest **movies** and **TV series** using data from [The Movie Database (TMDb)](https://www.themoviedb.org/).
+* View detailed overviews, ratings, release dates, and categories.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+### 🔐 User Authentication
+
+* Login and register securely.
+* Session persistence using tokens or browser storage.
+* Personalized experience for each user.
+
+### 📺 Streaming Support
+
+* Direct access to streaming previews or trailers (if available).
+* Clean and immersive viewing experience.
+
+### 🕓 Watch Later List
+
+* Add movies or shows to a personal **watch later** list.
+* Persistent list across sessions after login.
+
+### 📊 Categorized Sections
+
+* Just Released
+* Popular of the Week
+* Trending Movies
+* Trending Series
+
+---
+
+## 🛠️ Built With
+
+* **React** – UI Library
+* **TypeScript** – Type Safety
+* **Vite** – Next-generation frontend tooling
+* **Tailwind CSS** – Utility-first styling
+* **TMDb API** – Movie and TV show data
+* **React Router** – Client-side routing
+* **Custom Hooks & API Services** – Clean data fetching
+* **State Management** – `useState`, `useEffect`
+* **Authentication** – (Appwrite)
+
+---
+
+## 🧩 Project Structure
+
+```
+src/
+│
+├── components/        # Reusable components like Hero, Carousels, Buttons
+├── routes/            # Page components (Home, Login, Register, Details)
+├── utlis/api/         # API utility functions (movieApi.ts) 
+└── main.tsx           # Application entry point
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 📦 Getting Started
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+### 1. Clone the Repo
+
+```bash
+git clone https://github.com/Suleman-Tasawar/saint-stream.git
+cd movieverse
 ```
+
+### 2. Install Dependencies
+
+```bash
+npm install
+```
+
+### 3. Environment Variables
+
+Create a `.env` file in the root:
+
+```env
+VITE_TMDB_API_KEY=your_tmdb_api_key
+VITE_TMDB_AUTHORIZATION_BEARER_KEY=your_tmdb_bearer_token
+```
+
+You can get these keys from [TMDb Developer Settings](https://www.themoviedb.org/settings/api).
+
+### 4. Run the App
+
+```bash
+npm run dev
+```
+
+---
+
+## ✅ Deployment
+
+You can deploy this app to:
+
+* **Vercel**
+* **Netlify**
+
+Just make sure to add your `.env` variables in the host environment settings.
+
+---
+
+
+## 🤝 Acknowledgements
+
+* [TMDb API](https://www.themoviedb.org/)
+* [React](https://react.dev/)
+* [Tailwind CSS](https://tailwindcss.com/)
+* [Vite](https://vitejs.dev/)
